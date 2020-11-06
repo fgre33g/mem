@@ -1,3 +1,5 @@
+import time
+
 import vk_api
 import random
 from vk_api.longpoll import VkLongPoll, VkEventType
@@ -18,12 +20,14 @@ for event in longpoll.listen():
                                   {'user_id': event.user_id,
                                    'message': 'Сам иди!',
                                    'random_id': 0})
+                time.sleep(10)
 
             elif response == "Люблю тебя":
                 vk_session.method('messages.send',
                                   {'user_id': event.user_id,
                                    'message': 'А я тебя люблю',
                                    'random_id': 0})
+                time.sleep(10)
 
             elif response == "Ику" or \
                     response == "Мой iq" \
@@ -33,6 +37,7 @@ for event in longpoll.listen():
                 vk_session.method('messages.send', {'user_id': event.user_id,
                                                     'message': 'Твой iq ' + str(random.choice(iq)),
                                                     'random_id': 0})
+                time.sleep(10)
             elif response.find('Мем') != -1 \
                     or response.find('мем') != -1 \
                     or response.find('Мемы') != -1 \
@@ -41,6 +46,7 @@ for event in longpoll.listen():
                                                     'message': 'Кто-то сказал MEM?\nНу лови))))',
                                                     'random_id': 0,
                                                     'attachment': 'photo66105035_' + str(random.choice(pickss))})
+                time.sleep(10)
         elif event.from_chat and not event.from_me:
             if response == "Пошел нахуй" \
                     or response == "Пошел на хуй" \
@@ -49,11 +55,13 @@ for event in longpoll.listen():
                                   {'chat_id': event.chat_id,
                                    'message': 'Сам иди!',
                                    'random_id': 0})
+                time.sleep(10)
             elif response == "Люблю тебя":
                 vk_session.method('messages.send',
                                   {'chat_id': event.chat_id,
                                    'message': 'А я тебя люблю',
                                    'random_id': 0})
+                time.sleep(10)
             elif response == "Ику" \
                     or response == "Мой iq" \
                     or response == "iq" or \
@@ -63,6 +71,7 @@ for event in longpoll.listen():
                                   {'chat_id': event.chat_id,
                                    'message': 'Твой iq ' + str(random.choice(iq)),
                                    'random_id': 0})
+                time.sleep(10)
             elif response.find('Мем') != -1 \
                     or response.find('мем') != -1 \
                     or response.find('Мемы') != -1 \
@@ -73,6 +82,7 @@ for event in longpoll.listen():
                                    'message': 'Кто-то сказал MEM?\nНу лови))))',
                                    'random_id': 0,
                                    'attachment': 'photo66105035_' + str(random.choice(pickss))})
+                time.sleep(10)
         elif event.from_me and not event.from_user:
             if response == "Пошел нахуй" \
                     or response == "Пошел на хуй" \
@@ -81,11 +91,13 @@ for event in longpoll.listen():
                                   {'chat_id': event.chat_id,
                                    'message': 'Сам иди!',
                                    'random_id': 0})
+                time.sleep(10)
             elif response == "Люблю тебя":
                 vk_session.method('messages.send',
                                   {'chat_id': event.chat_id,
                                    'message': 'А я тебя люблю',
                                    'random_id': 0})
+                time.sleep(10)
             elif response == "Ику" \
                     or response == "Мой iq" \
                     or response == "iq" or \
@@ -95,6 +107,7 @@ for event in longpoll.listen():
                                   {'chat_id': event.chat_id,
                                    'message': 'Твой iq ' + str(random.choice(iq)),
                                    'random_id': 0})
+                time.sleep(10)
             elif response.find('Мем') != -1 \
                     or response.find('мем') != -1 \
                     or response.find('Мемы') != -1 \
@@ -105,6 +118,7 @@ for event in longpoll.listen():
                                    'message': '',
                                    'random_id': 0,
                                    'attachment': 'photo66105035_' + str(random.choice(pickss))})
+                time.sleep(10)
 
         elif event.from_me and not event.from_chat:
             if response == "Пошел нахуй" \
@@ -114,11 +128,13 @@ for event in longpoll.listen():
                                   {'user_id': event.user_id,
                                    'message': 'Сам иди!',
                                    'random_id': 0})
+                time.sleep(10)
             elif response == "Люблю тебя":
                 vk_session.method('messages.send',
                                   {'user_id': event.user_id,
                                    'message': 'А я тебя люблю',
                                    'random_id': 0})
+                time.sleep(10)
             elif response == "Ику" \
                     or response == "Мой iq" \
                     or response == "iq" or \
@@ -128,6 +144,7 @@ for event in longpoll.listen():
                                   {'user_id': event.user_id,
                                    'message': 'Твой iq ' + str(random.choice(iq)),
                                    'random_id': 0})
+                time.sleep(10)
             elif response.find('Мем') != -1 \
                     or response.find('мем') != -1 \
                     or response.find('Мемы') != -1 \
@@ -138,3 +155,4 @@ for event in longpoll.listen():
                                    'random_id': 0,
                                    "message": '',
                                    'attachment': 'photo66105035_' + str(random.choice(pickss))})
+                time.sleep(10)
